@@ -99,3 +99,39 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# MNIST data
+# mnist_samples/MNIST_data/*
+
+# cifar data
+# cifar10_sample/data_set/*
+# cifar10_cc/data_set/*
+
+# idea
+.idea/
+
+
+# tmp data path
+tmp/MNIST_data/
+tmp/cifar10_data/
+tmp/log
+
+# gan test file path
+GAN/output/*
+
+# game ai model
+reinforcement_learning_pygame/model/*
+
+# spider log
+spider/log/*
+
+
+# rnn model
+rnn/data/*
+rnn/model/*
+
+# style trans
+style_trans/pretrained/*
+
+
+
