@@ -26,7 +26,7 @@ def batch_generator(arr, batch_size, seq_size):
         for n in range(0, arr.shape[1], seq_size):
             x = arr[:, n: n + seq_size]
             y = copy.copy(x)
-            y[:, :-1] = x[:, 1:]
+            y[:, :-1], y[:, -1] = x[:, 1:], x[:, 0]
             yield x, y
 
 

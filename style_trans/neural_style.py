@@ -19,24 +19,24 @@ import time
 import os
 import utils
 
-tf.app.flags.DEFINE_float("CONTENT_WEIGHT", 5e0, "Weight for content features loss")
-tf.app.flags.DEFINE_float("STYLE_WEIGHT", 1e2, "Weight for style features loss")
-tf.app.flags.DEFINE_float("TV_WEIGHT", 1e-5, "Weight for total variation loss")
-tf.app.flags.DEFINE_string("VGG_MODEL", "pretrained/vgg_16.ckpt", "vgg model params path")
-tf.app.flags.DEFINE_list("CONTENT_LAYERS", ["vgg_16/conv3/conv3_3"],
-                           "Which VGG layer to extract content loss from")
-tf.app.flags.DEFINE_list("STYLE_LAYERS", ["vgg_16/conv1/conv1_2", "vgg_16/conv2/conv2_2",
-                                          "vgg_16/conv3/conv3_3", "vgg_16/conv4/conv4_3"],
-                           "Which layers to extract style from")
-tf.app.flags.DEFINE_string("SUMMARY_PATH", "tensorboard", "Path to store Tensorboard summaries")
-tf.app.flags.DEFINE_string("STYLE_IMAGE", "img/picasso.jpg", "Styles to train")
-tf.app.flags.DEFINE_float("STYLE_SCALE", 1.0, "Scale styles. Higher extracts smaller features")
-tf.app.flags.DEFINE_float("LEARNING_RATE", 10., "Learning rate")
-tf.app.flags.DEFINE_string("CONTENT_IMAGE", "img/dancing.jpg", "Content image to use")
-tf.app.flags.DEFINE_boolean("RANDOM_INIT", True, "Start from random noise")
-tf.app.flags.DEFINE_integer("NUM_ITERATIONS", 1000, "Number of iterations")
-# reduce image size because of cpu training
-tf.app.flags.DEFINE_integer("IMAGE_SIZE", 256, "Size of output image")
+# tf.app.flags.DEFINE_float("CONTENT_WEIGHT", 5e0, "Weight for content features loss")
+# tf.app.flags.DEFINE_float("STYLE_WEIGHT", 1e2, "Weight for style features loss")
+# tf.app.flags.DEFINE_float("TV_WEIGHT", 1e-5, "Weight for total variation loss")
+# tf.app.flags.DEFINE_string("VGG_MODEL", "pretrained/vgg_16.ckpt", "vgg model params path")
+# tf.app.flags.DEFINE_list("CONTENT_LAYERS", ["vgg_16/conv3/conv3_3"],
+#                            "Which VGG layer to extract content loss from")
+# tf.app.flags.DEFINE_list("STYLE_LAYERS", ["vgg_16/conv1/conv1_2", "vgg_16/conv2/conv2_2",
+#                                           "vgg_16/conv3/conv3_3", "vgg_16/conv4/conv4_3"],
+#                            "Which layers to extract style from")
+# tf.app.flags.DEFINE_string("SUMMARY_PATH", "tensorboard", "Path to store Tensorboard summaries")
+# tf.app.flags.DEFINE_string("STYLE_IMAGE", "img/picasso.jpg", "Styles to train")
+# tf.app.flags.DEFINE_float("STYLE_SCALE", 1.0, "Scale styles. Higher extracts smaller features")
+# tf.app.flags.DEFINE_float("LEARNING_RATE", 10., "Learning rate")
+# tf.app.flags.DEFINE_string("CONTENT_IMAGE", "img/dancing.jpg", "Content image to use")
+# tf.app.flags.DEFINE_boolean("RANDOM_INIT", True, "Start from random noise")
+# tf.app.flags.DEFINE_integer("NUM_ITERATIONS", 1000, "Number of iterations")
+# # reduce image size because of cpu training
+# tf.app.flags.DEFINE_integer("IMAGE_SIZE", 256, "Size of output image")
 
 #######################################################################
 tf.app.flags.DEFINE_string("loss_model", 'vgg_16', "loss model name")
